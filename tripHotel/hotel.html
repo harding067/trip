@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 更改web默认icon -->
+    <link rel="icon" type="image/x-icon" href="./hotelImg/trip.ico" />
+    <title>旅游—酒店</title>
+    <!-- 引入style -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <!-- 引入jQuery -->
+    <script src="../jquery/jquery-3.5.1.js"></script>
+
+    <script src="../bootstrap/bootstrap.js"></script>
+    <!-- 引入vue -->
+    <script src="../vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="bigbox">
+        <div class="container">
+            <!-- 导航条 -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                        <a class="navbar-brand" href="#">
+                            <img :src="logoImg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="../tripHome/home.html" style="color: #333;font-weight: 700;">首页</a></li>
+                            <li><a href="#" style="color: #333;font-weight: 700;">目的地</a></li>
+                            <li><a href="../tripSilk/silkBag.html" style="color: #333;font-weight: 700;">锦囊</a></li>
+                            <li><a href="#" style="color: #8cc418;font-weight: 700;">酒店</a></li>
+                            <li><a href="#" style="color: #333;font-weight: 700;">商城</a></li>
+                            <input type="text" class="ipt" placeholder="订酒店">
+
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" style="color: #333;font-weight: 700;">注册</a></li>
+                            <li><a href="#" style="color: #333;font-weight: 700;">登录</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- 订酒店 -->
+            <div class="book row">
+                <h6>订酒店</h6>
+                <div class="nullRow2"></div>
+                <div class="col-md-5">
+                    <input type="text" placeholder="出行目的地">
+                </div>
+                <div class="col-md-2">
+                    <input class="inDate" type="text" readonly placeholder="入住日期">
+                </div>
+                <div class="col-md-2">
+                    <input class="outDate" type="text" readonly placeholder="离店日期">
+                </div>
+                <div class="col-md-2">
+                    <input class="person" type="text" readonly placeholder="人数未定">
+                </div>
+                <div class="searchBox col-md-1">
+                    <img src="./hotelImg/search.png" alt="">
+                </div>
+            </div>
+            <!-- 住宿攻略 -->
+            <div class="nullRow4"></div>
+            <div class="icon">
+                <div class="item">
+                    <div class="block1"></div>
+                    <div class="txt">
+                        <p class="title">住宿攻略</p>
+                        <p class="desc">区域攻略到地方特色，应有尽有</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="block2"></div>
+                    <div class="txt">
+                        <p class="title">专享价格</p>
+                        <p class="desc">多平台价格对比，天天专属特惠</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="block3"></div>
+                    <div class="txt">
+                        <p class="title">真实点评</p>
+                        <p class="desc">超过100万真实用户点评与游记</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="nullRow1"></div>
+            <div class="stay">
+                <h1>主题住宿</h1>
+                <div class="nullRow1"></div>
+                <h4>潜水胜地</h4>
+                <div class="mainStay row">
+                    <div class="nullRow3"></div>
+                    <div class="stayRoom col-md-4" v-for="(item,index) in stayImg" :key="index">
+                        <div class="stayArea">
+                            <p class="city">{{item.city}}</p>
+                            <p class="country">{{item.country}}</p>
+                        </div>
+                        <img :src="item.src" alt="">
+                        <div class="nullRow3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 特价 -->
+            <div class="special">
+                <h1>特价酒店</h1>
+                <div class="nullRow1"></div>
+                <h4>亚洲</h4>
+                <div class="mainSpecial row">
+                    <div class="nullRow3"></div>
+                    <div class="specialRoom col-md-3" v-for="(item,index) in specialImg" :key="index">
+                        <div class="score">
+                            <span>{{item.score}}分</span>
+                        </div>
+                        <img :src="item.src" alt="">
+                        <div class="area">
+                            <p class="hotelName">{{item.name}}</p>
+                            <p class="hotelEN">{{item.nameEN}}</p>
+                        </div>
+
+                        <div class="nullRow3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 引入vueJS -->
+    <script src="./vueJS.js"></script>
+</body>
+
+</html>

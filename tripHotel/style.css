@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 10px;
+    font-family: "苹方", "Microsoft YaHei";
+}
+
+.container .navbar {
+    background-color: transparent;
+    /* border: none; */
+    height: 6rem;
+    line-height: 6rem;
+}
+
+.container .nav {
+    height: 6rem;
+    line-height: 6rem;
+}
+
+.container .nav li {
+    margin-top: .5rem;
+}
+
+.container .navbar-brand {
+    /* background-color: #f00; */
+    height: 6rem;
+}
+
+.container .navbar-brand img {
+    height: 100%;
+    margin-top: -.2rem;
+}
+
+.container .nav li a {
+    font-size: 1.4rem;
+}
+
+.container .ipt {
+    height: 3rem;
+    line-height: 3rem;
+    background: url(./hotelImg//search.png) no-repeat;
+    background-size: 2rem;
+    background-position: 0.5rem;
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    text-indent: 3em;
+}
+
+.container .book h6 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-indent: 1em;
+}
+
+.container .book>div input:first-child {
+    width: 100%;
+}
+
+.container .book>div .inDate,
+.container .book>div .outDate {
+    background: url(./hotelImg/calendar.png) no-repeat;
+    background-size: 10rem;
+    background-position: 150% -3.5rem;
+}
+
+.container .book>div input {
+    height: 4.5rem;
+    text-indent: 1.5em;
+    color: #333;
+    font-weight: 700;
+    border: 2px solid #bababa;
+    border-radius: .5rem;
+    /* outline: none; */
+}
+
+.container .book>div input:focus {
+    cursor: pointer;
+}
+
+.container .book>div .person {
+    background: url(./hotelImg/person.png) no-repeat;
+    background-size: 20rem;
+    background-position: -220% -.7rem;
+}
+
+.container .book .searchBox {
+    width: 7%;
+    height: 4.2rem;
+    line-height: 4.2rem;
+    text-align: center;
+    background-color: #ff9d00;
+    border-radius: .5rem;
+}
+
+.container .book .searchBox:hover {
+    cursor: pointer;
+}
+
+.container .book .searchBox:active {
+    background-color: #ff9d0099;
+}
+
+.container .icon {
+    /* background-color: #33333344; */
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* .container .icon>div:nth-of-type(2) {
+    padding-left: 5.7%;
+}
+
+.container .icon>div:last-child {
+    padding-left: 7.7%;
+} */
+
+.container .icon>div {
+    height: 100%;
+    /* background-color: #ff9d0011; */
+}
+
+.container .icon .block1 {
+    float: left;
+    width: 5.5rem;
+    height: 100%;
+    background: url(./hotelImg/BspriteImg.png) no-repeat .5rem .8rem;
+    background-size: 20rem;
+}
+
+.container .icon .block2 {
+    float: left;
+    width: 6rem;
+    height: 100%;
+    background: url(./hotelImg/BspriteImg.png) no-repeat -6rem .8rem;
+    background-size: 20rem;
+}
+
+.container .icon .block3 {
+    float: left;
+    width: 6rem;
+    height: 100%;
+    background: url(./hotelImg/BspriteImg.png) no-repeat -13.3rem .8rem;
+    background-size: 20rem;
+}
+
+.container .icon .txt {
+    padding: .5rem;
+    float: left;
+}
+
+.container .icon .txt .title {
+    font-size: 2.2rem;
+    color: #676767;
+}
+
+.container .icon .txt .desc {
+    font-size: 1.6rem;
+    color: #676767;
+}
+
+.container .stay h1 {
+    text-align: center;
+}
+
+.container .stay h4 {
+    text-align: center;
+}
+
+.container .stay .mainStay {
+    border-top: 2px solid #b6da6c;
+    /* background-color: #9e9e9e22; */
+}
+
+.container .stay .mainStay:last-child {
+    border: none;
+}
+
+.container .stay .mainStay .stayRoom {
+    position: relative;
+}
+
+.container .stay .mainStay .stayRoom .stayArea {
+    position: absolute;
+    top: 32%;
+    left: 38%;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+}
+
+.container .stay .mainStay .stayRoom .stayArea .city {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.container .stay .mainStay .stayRoom .stayArea .country {
+    font-size: 2rem;
+}
+
+.container .stay .mainStay .stayRoom img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container .special h1 {
+    text-align: center;
+}
+
+.container .special h4 {
+    text-align: center;
+}
+
+.container .special .specialRoom {
+    position: relative;
+}
+
+.container .special .specialRoom .score {
+    position: absolute;
+    top: 1rem;
+    left: 2.5rem;
+    padding: .2rem 1rem;
+    background-color: #00000099;
+    color: #fff;
+    border-radius: .4rem;
+}
+
+.container .special .specialRoom .area {
+    position: absolute;
+    bottom: 4rem;
+    left: 2.5rem;
+    color: #fff;
+}
+
+.container .special .specialRoom .area p {
+    margin: 0;
+    padding: 0;
+}
+
+.container .special .specialRoom .area .hotelName {
+    font-size: 1.3rem;
+    margin-bottom: -.1rem;
+}
+
+.container .special .specialRoom .area .hotelEN {
+    font-size: .01rem;
+}
+
+.container .special .specialRoom img {
+    width: 100%;
+    height: 20rem;
+}
+
+.nullRow1 {
+    height: 1rem;
+}
+
+.nullRow2 {
+    height: 2rem;
+}
+
+.nullRow3 {
+    height: 3rem;
+}
+
+.nullRow4 {
+    height: 4rem;
+}
