@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 更改web默认icon -->
+    <link rel="icon" type="image/x-icon" href="./homeImg/trip.ico" />
+    <title>旅游—首页</title>
+
+    <!-- 引入style -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+    <!-- 引入jQuery -->
+    <script src="../jquery/jquery-3.5.1.js"></script>
+    <!-- 引入bootstrap.js -->
+    <script src="../bootstrap/bootstrap.js"></script>
+    <!-- 引入vue -->
+    <script src="../vue/vue.js"></script>
+    <!-- 引入swiper -->
+    <link rel="stylesheet" href="../swiperBundle/swiper-bundle.min.css">
+    <script src="../swiperBundle/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="bigbox">
+        <!-- swiper -->
+        <div class="swipe">
+            <div class="swiper-container">
+                <!-- 使用vue数组遍历图片路径呈现图片 -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(item,index) in swiperImg">
+                        <img :src="item.src" alt="">
+                    </div>
+                </div>
+                <!-- 分页器 -->
+                <div class="swiper-pagination"></div>
+                <!-- 左右切换箭头 -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <!-- 导航 -->
+            <div class="navTop">
+                <div class="navbar">
+                    <div class="navbar-header">
+                        <div class="col-md-1"></div>
+                        <a class="trip-logo" href="">
+                            <img :src="logoPath" alt="">
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="" style="color: #8cc418;">首页</a></li>
+                        <li><a href="#">目的地</a></li>
+                        <li><a href="../tripSilk/silkBag.html">锦囊</a></li>
+                        <li><a href="../tripHotel/hotel.html">酒店</a></li>
+                        <li><a href="#">商城</a></li>
+                    </ul>
+                    <div class="col-md-7"></div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">注册</a></li>
+                        <li><a href="#">登录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 搜索 -->
+            <div class="search">
+                <img :src="searchPath" alt="">
+                <input type="text" placeholder="搜城市/机场/酒店">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+            </div>
+            <!-- 推荐 -->
+            <div class="recommend">
+                <h2>今日推荐</h2>
+                <div class="recommendGoods row">
+                    <div class="sbox col-md-3" v-for="(item,index) in recommendImg" :key="index">
+                        <div class="goods">
+                            <img :src="item.src" alt="">
+                            <h4>{{item.txt}}</h4>
+                            <span>{{item.leftInfo}}</span>
+                            <i>{{item.rightInfo}}</i>
+                        </div>
+                        <!-- 登录注册模块 -->
+                        <div v-if="index == 3" class="goods logoModal">
+                            <!-- <div class="nullRow"></div> -->
+                            <h3>&nbsp;</h3>
+                            <h3>让我们更懂你</h3>
+                            <p class="text">拥有旅行账号，获得更准确的推荐</p>
+                            <button>立即注册</button>
+                            <p class="line">已有账号？<a href="#">登录</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商城 -->
+        <div class="store">
+            <div class="container">
+                <h2>商城</h2>
+
+                <div class="col-md-4" v-for="(item,index) in storeImg">
+                    <div class="good">
+                        <img class="goodImg" :src="item.src" alt="">
+                        <div class="goodTxt">
+                            <p class="txt">{{item.txt}}</p>
+                            <span class="flag">{{item.flag}}</span>
+                            <br>
+                            <p class="price">
+                                <span>￥</span>
+                                <i>{{item.price}}</i>
+                                <em>元起</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nullRow"></div>
+            <!-- 更多商品 -->
+            <div class="row">
+                <button id="more">更多商品</button>
+            </div>
+
+            <div class="returnTop" @click="backTop">
+                <div class="arrowTop"></div>
+                <p>返回顶部</p>
+            </div>
+        </div>
+        <!-- 底部1 -->
+        <div class="footer">
+            <div class="container">
+                <div class="footerContent row">
+
+                    <div class="col-md-3">
+                        <ul class="list">
+                            <div class="title">关于我们</div>
+                            <div class="nullRow2"></div>
+                            <li><a href="#">旅游简介</a></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li><a href="#">合作伙伴</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <ul class="list">
+                            <div class="title">加入旅行</div>
+                            <div class="nullRow2"></div>
+                            <li><a href="#">招聘职位</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <ul class="list">
+                            <div class="title">网站条款</div>
+                            <div class="nullRow2"></div>
+                            <li><a href="#">会员条款</a></li>
+                            <li><a href="#">社区指南</a></li>
+                            <li><a href="#">版权声明</a></li>
+                            <li><a href="#">免责声明</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="col-md-6">
+                            <ul class="list">
+                                <div class="title">帮助中心</div>
+                                <div class="nullRow2"></div>
+                                <li><a href="#">新手上路</a></li>
+                                <li><a href="#">使用帮助</a></li>
+                                <li><a href="#">网站地图</a></li>
+                                <li><a href="#">旅行工具</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="nullRow3"></div>
+                            <div class="code">
+                                <img src="./homeImg/code.png" alt="">
+                                <p>关注公众号</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部2 -->
+        <div class="bottomer">
+            <div class="container">
+                <div class="logoImg">
+                    <img src="./homeImg/logo.png" alt="">
+                </div>
+                <div class="copy">
+                    <p>2004-2021&copy;旅游网qyer.com All rights reserved.Version v5.57京ICP备12003524号 &nbsp;
+                        <img class="safe" src="./homeImg/safe.png" alt=""> &nbsp; 京公网安备11010502041090京ICP证140673号营业执照经营许可证
+                    </p>
+                </div>
+                <div class="safeOrg">
+                    <img src="./homeImg/cx.png" alt="">
+                    <img src="./homeImg/brand.jpg" alt="">
+                </div>
+                <div class="copy">
+                    <p>旅游网为旅行者提供原创实用的出境游旅行指南和旅游攻略、旅行社区和问答交流平台，并提供签证、保险、机票、酒店预订、租车等服务,</p>
+                </div>
+            </div>
+            <!-- 底部最后 -->
+            <div class="bottomerLast">
+                <div class="container">
+                    <div class="footerLinks">
+                        <span>友情链接</span>
+                        <a :href="item.src" target="_blank" v-for="(item,index) in linksWeb">{{item.name}}</a>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 引入vueJs -->
+    <script src="./vueJs.js"></script>
+
+    <!-- 初始化swiper -->
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            sccMode: true,
+            // autoplay: true,
+            autoplay: {
+                disableOnInteraction: false, //增加此属性即可
+                delay: 3000,
+            },
+            loop: true,
+            effect: "slide",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                bulletElement: 'li',
+                // 分页器的小点可控制轮播图的切换
+                clickable: true,
+            },
+            mousewheel: true,
+            keyboard: true,
+        })
+    </script>
+</body>
+
+</html>
