@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 10px;
+    font-family: "苹方", "Microsoft YaHei";
+    /* border: 1px solid #f00; */
+    overflow-x: hidden;
+}
+
+ul li {
+    list-style: none;
+}
+
+.swipe {
+    width: 100%;
+    height: 46rem;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: -10;
+}
+
+.navTop {
+    width: 100%;
+    position: relative;
+    top: -50rem;
+    z-index: 1;
+    /* background-color: #f00; */
+}
+
+.search {
+    position: relative;
+    top: -50rem;
+    z-index: 1;
+    height: 7rem;
+    /* background-color: #f0f; */
+    text-align: center;
+}
+
+.search input {
+    position: relative;
+    width: 65rem;
+    height: 6rem;
+    text-indent: 4em;
+    font-size: 2.2rem;
+    border: 0.02rem solid #666;
+    border-radius: 1.5rem;
+    outline: none;
+}
+
+.search img {
+    position: relative;
+    left: 6.5rem;
+    top: -0.2rem;
+    z-index: 1;
+}
+
+.search input:-webkit-input-placeholder {
+    color: #999;
+}
+
+.navbar-nav li a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.swiper-container .swiper-button-prev {
+    color: #fff;
+}
+
+.swiper-container .swiper-button-next {
+    color: #fff;
+}
+
+.swiper-container .swiper-pagination {
+    --swiper-theme-color: #fff;
+}
+
+.swiper-container .swiper-pagination-bullet {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.trip-logo {
+    float: left;
+    width: 8rem;
+    height: 8rem;
+    /* background-color: #f00; */
+    margin-top: -1rem;
+}
+
+.trip-logo img {
+    vertical-align: middle;
+    width: 6.5rem;
+    height: 6rem;
+}
+
+.container .recommend {
+    text-align: center;
+}
+
+.container .recommend .recommendGoods {
+    background-color: #cccccc77;
+}
+
+.container .recommend h2 {
+    font-weight: 700;
+}
+
+.container .recommend .recommendGoods>div {
+    padding: 1rem;
+    /* border: 1px solid #f00; */
+    height: 32rem;
+}
+
+.container .recommend .recommendGoods div h4 {
+    padding: 1rem;
+    text-align: left;
+}
+
+.container .recommend .recommendGoods div span {
+    font-style: normal;
+    float: left;
+    margin-left: 1rem;
+}
+
+.container .recommend .recommendGoods div i {
+    font-style: normal;
+    float: right;
+    margin-right: 1rem;
+}
+
+.container .recommend .recommendGoods div .goods {
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.container .recommend .recommendGoods div .logoModal h3 {
+    margin-top: 2rem;
+}
+
+.container .recommend .recommendGoods div .logoModal .text {
+    font-size: 1.4rem;
+    color: #a09b9d;
+    margin: 3rem 0;
+}
+
+.container .recommend .recommendGoods div .logoModal button {
+    width: 21rem;
+    height: 6rem;
+    border-radius: 0.5rem;
+    background-color: #009900;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.container .recommend .recommendGoods div .logoModal button:active {
+    font-size: 2.9rem;
+    background-color: #5da95d;
+}
+
+.container .recommend .recommendGoods div .logoModal h3 {
+    font-size: 2.4rem;
+}
+
+.container .recommend .recommendGoods div .logoModal a {
+    color: #009900;
+}
+
+.container .recommend .recommendGoods div .logoModal .line {
+    color: #333;
+    font-size: 2rem;
+}
+
+.container .recommend .recommendGoods>div img {
+    width: 100%;
+}
+
+.store {
+    margin: 5rem 0 0 0;
+    width: 100%;
+    /* height: 60rem; */
+    padding: 5% 0;
+    background: linear-gradient(to bottom, #5db76e, #1ab396);
+    text-align: center;
+}
+
+.store h2 {
+    margin: 0 0 2rem 0;
+    font-weight: 700;
+}
+
+.store .container {
+    /* background-color: skyblue; */
+    padding: 0;
+}
+
+.store .container>div {
+    padding: 1rem;
+    text-align: left;
+    height: 15rem;
+    background-color: #f5f5f555;
+}
+
+.store .container .good {
+    /* width: 35rem; */
+    height: 100%;
+    background-color: #fff;
+}
+
+.store .container>div .good .goodImg {
+    height: 100%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.store .container>div .good .goodTxt {
+    padding: 1rem;
+}
+
+.store .container>div .good .goodTxt .txt {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333;
+}
+
+.store .container>div .good .goodTxt .flag {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #33cfd4;
+    padding: .2rem .5rem;
+    border: 1px solid #33cfd4;
+    border-radius: 0.5rem;
+}
+
+.store .container>div .good .goodTxt .price {
+    float: right;
+    color: #ff0000;
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.store .container>div .good .goodTxt .price span {
+    font-size: 1.4rem;
+    margin: 1rem 0 0 0;
+}
+
+.store .container>div .good .goodTxt .price i {
+    font-style: normal;
+}
+
+.store .container>div .good .goodTxt .price em {
+    font-style: normal;
+    font-size: 1.6rem;
+    margin: .8rem 0 0 0;
+}
+
+#more {
+    width: 23.5rem;
+    height: 7rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #333;
+    background-color: #fff;
+    outline: none;
+    border: none;
+}
+
+#more:active {
+    font-size: 2.9rem;
+    background-color: #ffffff66;
+}
+
+.returnTop {
+    position: absolute;
+    right: 4rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: #f5f5f5;
+    font-size: 1rem;
+    padding: .1rem;
+}
+
+.returnTop .arrowTop {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    transform: rotate(45deg);
+    margin: 1rem auto;
+}
+
+.returnTop:hover {
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    padding: 2% 0;
+    background-color: #323232;
+    color: #fff;
+}
+
+.footer .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-left: 4px solid #41bf68;
+    padding-left: 1.8rem;
+}
+
+.footer .list li {
+    font-size: 1.8rem;
+    font-weight: 500;
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 2rem;
+}
+
+.footer .list li a {
+    color: #848484;
+}
+
+.footer .code {
+    width: 12rem;
+    text-align: center;
+}
+
+.footer .code p {
+    color: #848484;
+    padding: 1rem 0;
+}
+
+.footer .code img {
+    width: 100%;
+}
+
+.bottomer {
+    width: 100%;
+    padding: 1%;
+    background-color: #232324;
+    font-size: 1.2rem;
+}
+
+.bottomer .container .logoImg {
+    float: left;
+    width: 8rem;
+    height: 8rem;
+}
+
+.bottomer .container .logoImg img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.bottomer .container .copy {
+    float: left;
+    color: #848484;
+}
+
+.bottomer .container .copy .safe {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bottomer .container .safeOrg {
+    float: right;
+}
+
+.bottomer .container .safeOrg img {
+    vertical-align: middle;
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: .6rem;
+}
+
+.bottomer .container .footerLinks a {
+    display: inline-block;
+    border-right: 1px solid #3f3f3f;
+    padding-right: 4px;
+    margin: .4rem .4rem .4rem 0;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    white-space: nowrap;
+    color: #3f3f3f;
+}
+
+.bottomer .container .footerLinks a:hover {
+    color: #f5f5f5;
+}
+
+.bottomer .container .footerLinks a:last-child {
+    border: none;
+}
+
+.bottomer .container .footerLinks span {
+    float: left;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nullRow {
+    height: 3rem;
+}
+
+.nullRow2 {
+    height: 2.4rem;
+}
+
+.nullRow3 {
+    height: 1.6rem;
+}
