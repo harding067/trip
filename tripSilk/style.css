@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 10px;
+    font-family: "苹方", "Microsoft YaHei";
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    background-color: #000;
+    height: 6rem;
+    line-height: 6rem;
+}
+
+.navbar-brand {
+    height: 6rem;
+}
+
+.navbar-brand img {
+    height: 100%;
+    margin-top: -.5rem;
+}
+
+.nav {
+    height: 6rem;
+    line-height: 6rem;
+}
+
+.nav li {
+    margin-top: .5rem;
+}
+
+.nav li a {
+    font-size: 1.6rem;
+}
+
+.silkNav {
+    height: 6rem;
+    line-height: 6rem;
+    background-color: #e7362c;
+}
+
+.silkNav .leftSilk {
+    float: left;
+    width: 20%;
+    padding: 0 4rem;
+}
+
+.silkNav span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.silkNav .search {
+    float: right;
+    width: 50%;
+    /* background-color: #8cc418; */
+    padding: 0 4rem 0 0;
+}
+
+.silkNav .search input {
+    position: relative;
+    z-index: -0;
+    /* width: 34.4rem; */
+    width: 60%;
+    height: 3.5rem;
+    text-indent: 3em;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+}
+
+.silkNav .search img {
+    position: relative;
+    left: 3.5rem;
+    z-index: 1;
+    width: 2rem;
+}
+
+.silkNav .search button {
+    position: relative;
+    top: -.1rem;
+    right: 2rem;
+    color: #9e9e9e;
+    font-size: 1.4rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.silkCenter {
+    /* background-color: #8cc418; */
+    height: 58rem;
+}
+
+.silkCenter .leftNav {
+    float: left;
+    width: 25%;
+    text-indent: 2em;
+    height: 100%;
+    /* background-color: #e7362c; */
+}
+
+.silkCenter .leftNav li {
+    height: 9.84%;
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #9e9e9e;
+    margin-top: .1rem;
+}
+
+.silkCenter .leftNav li a {
+    color: #9e9e9e;
+}
+
+.silkCenter .leftNav li:hover {
+    background-color: #8cc418;
+    cursor: pointer;
+}
+
+.silkCenter .leftNav li:hover a {
+    color: #fff;
+}
+
+.silkCenter .leftNav li:first-child {
+    background-color: #c5e18b;
+    margin: 0;
+}
+
+.silkCenter .swipe {
+    float: right;
+    /* background-color: #ff9; */
+    width: 74%;
+    height: 100%;
+}
+
+.silkCenter .swipe .swiper-container .swiper-slide img {
+    float: right;
+    width: 100%;
+    height: 58rem;
+}
+
+.recommend h4 {
+    font-size: 1.8rem;
+    color: #676767;
+    font-weight: 700;
+}
+
+.recommend>div {
+    position: relative;
+    text-align: center;
+    background-color: #f6f6f6;
+    height: 31rem;
+    border-right: 1px solid #d8d8d8;
+    padding: 2rem 0 0 0;
+}
+
+.recommend>div .mainImg {
+    position: relative;
+    width: 13.8rem;
+    height: 20rem;
+    border: .5rem solid #fff;
+    box-shadow: 0px 0px 1px 1px #88888844;
+}
+
+.recommend>div .flag {
+    position: absolute;
+    top: 2.5rem;
+    padding-left: 2.5%;
+    z-index: 1;
+}
+
+.recommend>div:last-child {
+    border: none;
+}
+
+.recommend>div p {
+    text-align: left;
+    text-indent: 1.5em;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: #1995dd;
+    font-weight: 700;
+}
+
+.recommend>div button {
+    padding: .5rem 4.3rem;
+    background-color: #1995dd;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+}
+
+.recommend>div button:active {
+    background-color: #1995dd66;
+}
+
+.allSilk h4 {
+    font-size: 1.8rem;
+    color: #676767;
+    font-weight: 700;
+}
+
+.allSilk h5 span {
+    display: inline-block;
+    border-right: 2px solid #67676788;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    color: #676767;
+    font-weight: 700;
+}
+
+.allSilk h5 a {
+    color: #1995dd;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.allSilk .allSilkBlock {
+    display: flex;
+    width: 100%;
+}
+
+.allSilk .allSilkBlock .item {
+    position: relative;
+    width: 25%;
+    height: 40rem;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #d8d8d8;
+    text-align: center;
+    border-right: 1px solid #fff;
+    padding-top: 3rem;
+}
+
+.allSilk .allSilkBlock .item p {
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-indent: 1.5em;
+}
+
+.allSilk .allSilkBlock .item .city {
+    color: #1995dd;
+    font-weight: 700;
+}
+
+.allSilk .allSilkBlock .item .country {
+    color: #676767;
+    font-weight: 700;
+}
+
+.allSilk .allSilkBlock .item .newTime {
+    color: #676767;
+    font-weight: 700;
+}
+
+.allSilk .allSilkBlock .item .flag {
+    position: absolute;
+    top: 3.5rem;
+    padding-left: 2.5%;
+    z-index: 1;
+}
+
+.allSilk .allSilkBlock .item .mainImg {
+    position: relative;
+    width: 80%;
+    height: 70%;
+    border: .5rem solid #fff;
+    box-shadow: 0px 0px 1px 1px #88888844;
+}
+
+.nullRow {
+    height: 4rem;
+}
+
+.nullRow1 {
+    height: 2rem;
+}
+
+.nullRow2 {
+    height: 3rem;
+}
+
+.nullRow3 {
+    height: .5rem;
+}
